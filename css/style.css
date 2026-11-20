@@ -1,1 +1,104 @@
-
+:root{--ink:#0F2A4A;--ink2:#1A4577;--sun:#F2B705;--moss:#1F7A5C;--paper:#F4F6F9;--line:#D9E0E8;--text:#1B2430}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Public Sans',system-ui,sans-serif;color:var(--text);line-height:1.65;background:#fff}
+img{max-width:100%;display:block;background:var(--line)}
+a{color:inherit}
+h1,h2,h3{font-family:'Bricolage Grotesque','Public Sans',sans-serif;line-height:1.15;color:var(--ink)}
+h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:20px}
+h3{font-size:1.2rem;margin-bottom:8px}
+p{margin-bottom:14px;max-width:70ch}
+:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.agungilhams-wrap{width:min(1120px,92%);margin:auto}
+.agungilhams-section{padding:64px 0}
+.agungilhams-alt{background:var(--paper)}
+.agungilhams-btn{display:inline-block;background:var(--sun);color:var(--ink);font-weight:700;padding:12px 24px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;font:inherit;font-weight:700;transition:transform .2s}
+.agungilhams-btn:hover{transform:translateY(-2px)}
+.agungilhams-btn-alt{background:transparent;color:#fff;border:2px solid #fff}
+#agungilhams-header{background:var(--ink);color:#fff;position:sticky;top:0;z-index:50}
+.agungilhams-nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+.agungilhams-brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.1rem}
+.agungilhams-brand img{height:44px;width:auto;background:none}
+.agungilhams-menu{display:flex;gap:4px;list-style:none;align-items:center}
+.agungilhams-menu a{display:block;padding:8px 12px;text-decoration:none;border-radius:8px;font-size:.95rem}
+.agungilhams-menu a:hover,.agungilhams-menu a.agungilhams-active{background:rgba(255,255,255,.14)}
+.agungilhams-menu .agungilhams-cta{background:var(--sun);color:var(--ink);font-weight:700}
+.agungilhams-drop{position:relative}
+.agungilhams-drop>button{background:none;border:0;color:#fff;font:inherit;font-size:.95rem;padding:8px 12px;border-radius:8px;cursor:pointer}
+.agungilhams-drop>button:hover{background:rgba(255,255,255,.14)}
+.agungilhams-sub{display:none;position:absolute;top:100%;left:0;background:var(--ink2);min-width:190px;list-style:none;border-radius:10px;padding:6px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.agungilhams-drop:hover .agungilhams-sub,.agungilhams-drop.agungilhams-open .agungilhams-sub{display:block}
+.agungilhams-burger{display:none;background:none;border:2px solid #fff;color:#fff;border-radius:8px;padding:6px 12px;font-size:1.1rem;cursor:pointer}
+.agungilhams-hero{background:linear-gradient(105deg,rgba(15,42,74,.95) 35%,rgba(15,42,74,.55)),url(IMG_UPACARA) center/cover;color:#fff;padding:110px 0 90px}
+.agungilhams-hero h1{color:#fff;font-size:clamp(2.2rem,6vw,4rem);max-width:15ch;margin-bottom:18px}
+.agungilhams-hero p{font-size:1.15rem;opacity:.92;margin-bottom:28px}
+.agungilhams-hero .agungilhams-btn+.agungilhams-btn{margin-left:10px}
+.agungilhams-pagetitle{background:var(--ink);color:#fff;padding:54px 0}
+.agungilhams-pagetitle h1{color:#fff;font-size:clamp(1.9rem,4vw,2.8rem)}
+.agungilhams-pagetitle p{opacity:.8;margin:6px 0 0}
+.agungilhams-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.agungilhams-tab{background:#fff;border:2px solid var(--line);border-radius:999px;padding:9px 18px;font:inherit;font-weight:600;cursor:pointer;color:var(--ink)}
+.agungilhams-tab[aria-selected=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+.agungilhams-panel{display:none;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.agungilhams-panel.agungilhams-show{display:grid}
+.agungilhams-panel img{border-radius:18px;aspect-ratio:4/3;object-fit:cover;width:100%}
+.agungilhams-split{display:grid;grid-template-columns:280px 1fr;gap:36px;align-items:start}
+.agungilhams-split img{border-radius:18px;width:100%;object-fit:cover}
+.agungilhams-more{max-height:7.5em;overflow:hidden;position:relative}
+.agungilhams-more.agungilhams-full{max-height:none}
+.agungilhams-link{background:none;border:0;color:var(--ink2);font:inherit;font-weight:700;cursor:pointer;text-decoration:underline}
+.agungilhams-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:18px}
+.agungilhams-stats .agungilhams-box{text-align:center;border-top:5px solid var(--sun)}
+.agungilhams-stats strong{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:2.8rem;color:var(--ink);line-height:1.1}
+.agungilhams-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.agungilhams-box{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;overflow:hidden}
+.agungilhams-box.agungilhams-media{padding:0}
+.agungilhams-box.agungilhams-media img{aspect-ratio:16/10;object-fit:cover;width:100%}
+.agungilhams-box.agungilhams-media div{padding:18px 20px 22px}
+.agungilhams-table{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.agungilhams-table th,.agungilhams-table td{text-align:left;padding:12px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+.agungilhams-table th{width:38%;background:var(--paper);color:var(--ink)}
+.agungilhams-quote{background:var(--ink);color:#fff;border-radius:18px;padding:34px;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.3rem,2.6vw,1.9rem);line-height:1.3;margin-bottom:28px}
+.agungilhams-quote small{display:block;margin-top:12px;color:var(--sun);font-size:1.1rem}
+.agungilhams-misi{padding-left:22px;display:grid;gap:12px}
+.agungilhams-timeline{border-left:4px solid var(--sun);padding-left:22px;display:grid;gap:22px}
+.agungilhams-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.agungilhams-gallery img{aspect-ratio:4/3;object-fit:cover;width:100%;border-radius:12px;cursor:zoom-in;transition:transform .25s}
+.agungilhams-gallery img:hover{transform:scale(1.03)}
+#agungilhams-lightbox{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;z-index:100;padding:20px;cursor:zoom-out}
+#agungilhams-lightbox.agungilhams-show{display:flex}
+#agungilhams-lightbox img{max-height:90vh;border-radius:10px}
+.agungilhams-map{border:0;width:100%;height:380px;border-radius:16px}
+.agungilhams-contact{display:grid;grid-template-columns:1fr 1.2fr;gap:32px}
+.agungilhams-field{margin-bottom:16px}
+.agungilhams-field label{display:block;font-weight:600;margin-bottom:6px}
+.agungilhams-field input,.agungilhams-field textarea{width:100%;padding:12px 14px;border:2px solid var(--line);border-radius:10px;font:inherit}
+.agungilhams-field input:focus,.agungilhams-field textarea:focus{border-color:var(--ink2);outline:0}
+.agungilhams-error{color:#B3261E;font-size:.9rem;min-height:1.2em}
+.agungilhams-success{display:none;background:#E3F4EC;color:#14583F;border-radius:12px;padding:14px 18px;margin-top:14px;font-weight:600}
+.agungilhams-cta-band{background:var(--moss);color:#fff;text-align:center;padding:56px 0}
+.agungilhams-cta-band h2{color:#fff}
+.agungilhams-cta-band p{margin:0 auto 22px}
+#agungilhams-footer{background:#0A1D34;color:#cfd8e3;padding:52px 0 22px}
+#agungilhams-footer h3{color:#fff;font-size:1.05rem}
+#agungilhams-footer a{text-decoration:none}
+#agungilhams-footer a:hover{color:var(--sun)}
+#agungilhams-footer ul{list-style:none;display:grid;gap:6px}
+.agungilhams-foot{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;margin-bottom:30px}
+.agungilhams-copy{border-top:1px solid rgba(255,255,255,.15);padding-top:18px;font-size:.9rem}
+#agungilhams-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;border:0;background:var(--sun);color:var(--ink);font-size:1.3rem;font-weight:700;cursor:pointer;display:none;z-index:40}
+@media(max-width:860px){
+.agungilhams-burger{display:block}
+.agungilhams-menu{display:none;position:absolute;left:0;right:0;top:100%;background:var(--ink);flex-direction:column;align-items:stretch;padding:10px 4%;max-height:80vh;overflow:auto}
+.agungilhams-menu.agungilhams-open{display:flex}
+.agungilhams-sub{position:static;display:none;box-shadow:none;background:rgba(255,255,255,.07)}
+.agungilhams-drop>button{width:100%;text-align:left}
+.agungilhams-drop:hover .agungilhams-sub{display:none}
+.agungilhams-drop.agungilhams-open .agungilhams-sub{display:block}
+.agungilhams-panel.agungilhams-show,.agungilhams-split,.agungilhams-contact{grid-template-columns:1fr}
+.agungilhams-split img{max-width:280px}
+.agungilhams-hero{padding:80px 0 60px}
+.agungilhams-hero .agungilhams-btn+.agungilhams-btn{margin:10px 0 0}
+.agungilhams-brand span{font-size:.95rem}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
